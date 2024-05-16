@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KidKinder</title>
+
+  
+
     <link rel="stylesheet" href="style.css">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,25 +32,38 @@
                     <ul class="header-link">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Classes</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown__menu">
+                                Classes  
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                            <div class="dropdown__content">
+                                <a href="#">Drawing</a>
+                                <a href="#">Language</a>
+                                <a href="#">Basic Science</a>
+                            </div>
+                            </li>
                         <li><a href="#">Teachers</a></li>
+
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <div><a href="#" class="primary-btn">Join Class</a></div>
                 <div class="toggle_btn">
-                    
-                        <i class="fa-solid fa-bars" id="btn"></i>
-                        
-                 
+                       
+                        <i class="fa-solid fa-bars" id="btn" onclick="changeIcon(this)"></i>
+                       
                 </div>
+             
             
             </div>
         </div>
     </header>  
   <!-- second-row-start -->
+ 
  <div class="banner-container">  
     <div class="page__container">
+<div class="banner_slider">
     <div class="banner-page">
         <div class="banner-hero">
             <div class="banner-header">
@@ -64,8 +81,44 @@
             </div>    
         </div>
     </div>
+    <div class="banner-page">
+        <div class="banner-hero">
+            <div class="banner-header">
+               <h4>Friendly Environment For Kids</h4>
+               <h2>Approach to built Kids <br>
+                 communication</h2>
+               <p>Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
+                 sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo dolore. </p>
+               <div ><a href="" class="primary-btn learn-more">Learn More</a></div>
+            </div>
+            <div class="main-img-container">
+               <div class="banner-img">
+                  <img src="/images/istockphoto-471999295-612x612.jpg" alt="Kid picture">
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="banner-page">
+        <div class="banner-hero">
+            <div class="banner-header">
+               <h4>Sports for kids</h4>
+               <h2>Games for Kids <br>
+                 Growth</h2>
+               <p>Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
+                 sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo dolore. </p>
+               <div ><a href="" class="primary-btn learn-more">Learn More</a></div>
+            </div>
+            <div class="main-img-container">
+               <div class="banner-img">
+                  <img src="/images/istockphoto-1346503960-612x612.jpg" alt="Kid picture">
+                </div>
+            </div>    
+        </div>
     </div>
 </div>
+    </div>
+</div>
+
  <!-- Category page -->
 
  <div class="category">
@@ -546,14 +599,35 @@
 
 </footer>
 <script>
+    
     const toggleBtn = document.querySelector('.toggle_btn')
     const headerMenu = document.querySelector('.header-link')
 
     toggleBtn.addEventListener('click',()=>{
         headerMenu.classList.toggle('nav-active');
+        
+       
     });
 
+    const changeIcon = function(icon){
+        icon.classList.toggle('fa-times')
+    }
    
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="text/javascript">
+    $('.banner_slider').slick({
+        dots: true,
+        arrows: true,
+         infinite: true,
+         speed:1000,
+         slidesToShow:1,
+         adaptiveHeight: true,
+         drag: true,
+    })
 </script>
 </body>
 </html>
