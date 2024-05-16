@@ -18,33 +18,29 @@
     <header class="site__header">
         <div class="page__container">
             <div class="header-top-container">
-                <div class="logo">
+                <div class="site__logo">
                     <h1>
-                    <a href="#" class="logo logo-head-img"><img src="/images/4155636.png" alt="logo image"></a>
-                    <a href="#" class="logo logo-head-text">KidKinder</a>
+                    <a href="#" class="site__logo logo-head-img"><img src="/images/4155636.png" alt="logo image"></a>
+                    <a href="#" class="site__logo logo-head-text">KidKinder</a>
                 </h1>
                 </div>
                 <nav class="header-nav">
-                    <ul>
-                        <li class="active"> <a href="#">Home</a></li>
+                    <ul class="header-link">
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Classes</a></li>
                         <li><a href="#">Teachers</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="primary-btn"><a href="#" class="join-class">Join Class</a></div>
+                <div><a href="#" class="primary-btn">Join Class</a></div>
                 <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
+                    
+                        <i class="fa-solid fa-bars" id="btn"></i>
+                        
+                 
                 </div>
-                <div class="dropDown_menu open">
-                    <li class="active"> <a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Classes</a></li>
-                    <li><a href="#">Teachers</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <a href="#" class="join-class">Join Class</a>
-                </div>
+            
             </div>
         </div>
     </header>  
@@ -53,13 +49,13 @@
     <div class="page__container">
     <div class="banner-page">
         <div class="banner-hero">
-            <div class="banner-text-field">
+            <div class="banner-header">
                <h4>Kids Learning Center</h4>
                <h2>New Approach to Kids <br>
                  Education </h2>
                <p>Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
                  sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo dolore. </p>
-               <div class="secondary-btn"><a href="" class="learn-more">Learn More</a></div>
+               <div ><a href="" class="primary-btn learn-more">Learn More</a></div>
             </div>
             <div class="main-img-container">
                <div class="banner-img">
@@ -75,14 +71,14 @@
  <div class="category">
     <div class="page__container">
         <div class="category-page">
-            <div class="box">
+            <div class="category__box">
                 <div class="img2"><img src="/images/fence.png" alt="icon"></div>
                   <div class="font2">
                      <h3>Play Ground</h3>
                      <p>Kasd labore kasd et dolor est <br> rebum dolor ut, clita dolor vero <br> lorem amet elitr vero</p>
                    </div>
                 </div>
-            <div class="box">
+            <div class="category__box">
               <div class="box2-co">
                 <div class="img3"><img src="/images/2972003.png" alt="icons"></div>
                    <div class="font3">
@@ -91,28 +87,28 @@
                     </div>
                 </div>  
             </div>
-            <div class="box">
+            <div class="category__box">
                 <div class="img4"><img src="/images/crayon-pen.png" alt="icons"></div>
                     <div class="font4">
                        <h3>Arts and Crafts</h3>
                        <p>Kasd labore kasd et dolor est <br> rebum dolor ut, clita dolor vero <br> lorem amet elitr vero</p>
                     </div>
                 </div>
-               <div class="box">
+               <div class="category__box">
                  <div class="img5"><img src="/images/toy-car.png" alt="icon"></div>
                    <div class="font5">
                      <h3>Safe Transportation</h3>
                      <p>Kasd labore kasd et dolor est <br> rebum dolor ut, clita dolor vero <br> lorem amet elitr vero</p>
                    </div>
                  </div>
-            <div class="box">
+            <div class="category__box">
                 <div class="img6"><img src="/images/sandwich.png" alt="icons"></div>
                 <div class="font6">
                     <h3>Healthy Food</h3>
                     <p>Kasd labore kasd et dolor est <br> rebum dolor ut, clita dolor vero <br> lorem amet elitr vero</p>
                 </div>
             </div>
-            <div class="box">
+            <div class="category__box">
                 <div class="img7"><img src="/images/backpack.png" alt="icons"></div>
                     <div class="font7">
                     <h3>Educational Tour</h3>
@@ -123,7 +119,7 @@
     </div>
 
     </div>
- </div>
+
 
  <!-- about page -->
 
@@ -149,52 +145,35 @@
                     <img src="/images/about-2.jpg" alt="children">
                    </div>
                    <div class="middle-content">
-                    <div class="about-line">
-                        
-                        <div class="about-div1">
-                            <div>
-                               <img src="/images/icons8-done-26(1).png" alt="Tick icon" class="icon-img">
-                            </div>
-                            <div>
-                               <p>Labore eos amet dolor amet diam </p>
-                            </div>
-                        </div>
+                    <div class="about_list">
+                      <ul class="middle-list">
+                        <li><p>
+                            Labore eos amet dolor amet diam
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                              Etsea et sit dolor amet ipsum
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Diam dolor diam elitripsum vero.
+                            </p>
+                        </li>
+                      </ul>
                     </div>
-                   
-                    <div class="about-line2">
-                        <div class="about-div2">
-                            <div>
-                             <img src="/images/icons8-done-26(1).png" alt="Tick icon" class="icon-img2">
-                            </div>
-                            <div>
-                             <p>Etsea et sit dolor amet ipsum  </p>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="about-line3">
-                       
-                        <div class="about-div3">
-                            <div>
-                              <img src="/images/icons8-done-26(1).png" alt="Tick icon" class="icon-img3">
-                            </div>
-                            <div>
-                             <p>Diam dolor diam elitripsum vero. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                   </div>
                     
                 </div>        
                     <div class="about-button1">
-                        <a href="#" class="learn-more2">Learn More</a>
+                        <a href="#" class="primary-btn learn-more2">Learn More</a>
                     </div>
                 </div>
             </div>
               </div>
         </div>
-    </div>
-</div>
+
 <!-- class page -->
 <div class="class-row-container">
 <div class="page__container">
@@ -212,22 +191,30 @@
         <img src="/images/class-1.jpg" alt="classroom pic">
         <div class="card-body-content">
         <h2 class="card-title">Drawing Class</h2>
-        <p>Justo ea diam stet diam ipsum no sit, ipsum <br>
-            vero et et diam ipsum duo et no et, ipsum <br>
+        <p>Justo ea diam stet diam ipsum no sit, ipsum 
+            vero et et diam ipsum duo et no et, ipsum 
             ipsum erat duo amet clita duo </p>
            <div class="card-element">
+            <div class="element-wrapper">
             <div class="element1 bold liner"><span>Age of kids</span></div>
             <div class="element1 liner"><span>3 - 6 Years</span></div>
+           </div>
+           <div class="element-wrapper">
             <div class="element1 bold liner"><span>Total Seats</span></div>
             <div class="element1 liner"><span>40 Seats</span></div>
+           </div>
+           <div class="element-wrapper">
             <div class="element1 bold liner"><span>Class Time</span></div>
             <div class="element1 liner"><span>08:00 - 10:00</span></div>
+          </div>
+          <div class="element-wrapper">
             <div class="element1 bold"><span>Tution Fee</span></div>
             <div class="element1 "><span>$290 / Month</span></div>
+        </div>
            </div>
            
           
-            <a href="#" class="card-button1">Join Now</a>
+            <a href="#" class="primary-btn card-button1">Join Now</a>
         </div>
      </div>
     
@@ -235,44 +222,57 @@
         <img src="/images/class-2.jpg" alt="classroom pic">
         <div class="card-body-content">
             <h2 class="card-title">Language Learning</h2>
-            <p>Justo ea diam stet diam ipsum no sit, ipsum <br>
-                vero et et diam ipsum duo et no et, ipsum <br>
+            <p>Justo ea diam stet diam ipsum no sit, ipsum 
+                vero et et diam ipsum duo et no et, ipsum 
                 ipsum erat duo amet clita duo </p>
                <div class="card-element">
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Age of kids</span></div>
                 <div class="element1 liner"><span>3 - 6 Years</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Total Seats</span></div>
                 <div class="element1 liner"><span>40 Seats</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Class Time</span></div>
                 <div class="element1 liner"><span>08:00 - 10:00</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold"><span>Tution Fee</span></div>
                 <div class="element1 "><span>$290 / Month</span></div>
+                </div>
                </div>
                
               
-                <a href="#" class="card-button1">Join Now</a>
+                <a href="#" class="primary-btn card-button1">Join Now</a>
             </div>
      </div>
      <div class="card-body3">
         <img src="/images/class-3.jpg" alt="classroom pic">
         <div class="card-body-content">
             <h2 class="card-title">Basic Science</h2>
-            <p>Justo ea diam stet diam ipsum no sit, ipsum <br>
-                vero et et diam ipsum duo et no et, ipsum <br>
-                ipsum erat duo amet clita duo </p>
+            <p>Justo ea diam stet diam ipsum no sit, ipsum 
+                vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo </p>
                <div class="card-element">
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Age of kids</span></div>
                 <div class="element1 liner"><span>3 - 6 Years</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Total Seats</span></div>
                 <div class="element1 liner"><span>40 Seats</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold liner"><span>Class Time</span></div>
                 <div class="element1 liner"><span>08:00 - 10:00</span></div>
+                </div>
+                <div class="element-wrapper">
                 <div class="element1 bold"><span>Tution Fee</span></div>
                 <div class="element1 "><span>$290 / Month</span></div>
+                </div>
                </div>
-               
-              
-                <a href="#" class="card-button1">Join Now</a>
+                <a href="#" class="primary-btn card-button1">Join Now</a>
             </div>
      </div>
     </div>
@@ -342,9 +342,10 @@
 </div>
 </div> 
 </div>  
-</div>
+
 
 <!-- Contact page -->
+
 <div class="contact">
     <div class="page__container">
         <h4>
@@ -357,13 +358,13 @@
         </div>
         <div class="contact-controller">
             <div class="contact-form">
-                <form action="">
-                    <input type="name" placeholder="Your name"> <br>
-                    <input type="email" placeholder="Your email"> <br>
-                    <input type="subject" placeholder="Subject">
+                <form action="submmit">
+                    <input type="text" placeholder="Your name"> <br>
+                    <input type="text" placeholder="Your email"> <br>
+                    <input type="text" placeholder="Subject">
                     <textarea name="message"  rows="10" placeholder="Message" class="contact-textarea"></textarea>
                     <div class="message-btn">
-                        <a href="#" class="form-btn">Send Message</a>
+                        <a href="#" class="primary-btn form-btn">Send Message</a>
                      </div>
                 </form>
             </div>
@@ -423,7 +424,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <footer>
 <div class="footer-row-container">
     <div class="page__container">
@@ -514,10 +515,10 @@
             <div class="footer-form">
                 <div class="footer-form">
                     <form>
-                        <input type="footer-name" placeholder="Your Name"> <br>
-                        <input type="footer-email" placeholder="Your Email"> <br>
-                        <div class="footer-form-btn">
-                            <a href="#" class="footer-btn2">Submit Now</a>
+                        <input type="text" placeholder="Your Name"> <br>
+                        <input type="text" placeholder="Your Email"> <br>
+                        <div>
+                            <a href="#" class="primary-btn footer-btn2">Submit Now</a>
                          </div>
                     </form>
                 </div>
@@ -542,11 +543,15 @@
  </div>
 </div>
 </div>
+
 </footer>
 <script>
-    const toggle_btn = document.querySelector('.toggle_btn')
-    const toggle_btnIcon = document.querySelector('.toggle_btn i')
-    const dropDown_menu = document.querySelector('.dropDown_menu')
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const headerMenu = document.querySelector('.header-link')
+
+    toggleBtn.addEventListener('click',()=>{
+        headerMenu.classList.toggle('nav-active');
+    });
 
    
 </script>

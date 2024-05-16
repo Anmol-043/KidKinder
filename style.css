@@ -45,6 +45,13 @@
    padding:15px 0;
    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19);
   }
+  .toggle_btn{
+    display: none;
+    font-size: 30px;
+    float: right;
+    color: var(--secondary);
+    cursor: pointer;
+  }
   .row-container-header{
     width: 100%;
     max-width:1200px;
@@ -78,7 +85,7 @@
 }
 
 
-.logo img{
+.site__logo img{
     width: 45px;
     height: 45px;
   
@@ -106,13 +113,9 @@ li a:hover{
   
 }
 
-.primary-btn{
-    position: relative;
-    left: 5px;
-    width: 140px;
-}
 
-a.join-class{
+
+.primary-btn{
     background-color: var(--cyan);
     border-radius: 100px;
     font-family: "Nunito Sans", sans-serif;
@@ -121,54 +124,14 @@ a.join-class{
     padding:10px 26px;
 
 }
-.dropDown_menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
-    background: 255, 255, 255, 0.1 ;
-    backdrop-filter:blur(15px);
-    overflow: hidden;
-    border-radius: 10px;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
-}
-.dropDown_menu open{
-    height: 240px;
-}
-.dropDown_menu li{
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.dropDown_menu li a:hover{
-    color: white;
-}
-.dropDown_menu .join-class{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    color: var(--secondary);
-}
-.dropDown_menu a.join-class:hover{
-    background-color: #0b7383;
-    color: white;
-}
 
 
-a.join-class:hover{
+
+a.primary-btn:hover{
     background-color: #0b7383;
     
 }
-.toggle_btn{
-    display: none;
-    color: var(--secondary);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+
 /* banner-page-start */
 
 .banner-container{
@@ -192,45 +155,33 @@ a.join-class:hover{
     font-size: 28px;
     color: var(--white);
     text-align: left;
-    
-    
-    
-    
-
 }
 
-.banner-text-field h4{
+.banner-header h4{
    
     font-size: 24px;
 }
-.banner-text-field h2{
+.banner-header h2{
     line-height: 65px;
     font-weight: bolder;
     font-size: 50px;
 }
-.banner-text-field p{
+.banner-header p{
    
     line-height: 27px;
     font-size: 16px;
     font-family: "Nunito sans", sans-serif;
     font-weight: 5px;
 }
-.secondary-btn{
+.learn-more{
+    font-size: 18px;
     margin-top: 40px;
-}
-.secondary-btn a{
     background-color: #00394f;
     border-style: none;
-    border-radius: 100px;
-    margin-top: 40px;
-    padding: 15px 50px;
-    width: 200px;
-    height: 60px;
-    font-family: "Nunito sans", sans-serif;
     color:white;
-    font-size: 18px;
-
+    line-height: 80px;
 }
+
 
 a.learn-more:hover{
     
@@ -270,10 +221,10 @@ max-width: 90%;
    justify-content: center;
     flex-wrap: wrap;
 }
-.box{
+.category__box{
     display: flex;
     width: 22rem;
-    height: 160px;
+ 
    
     /* position: relative;
     top: 90px;
@@ -287,11 +238,11 @@ max-width: 90%;
     
 }
 @media only screen and (max-width:767px) {
-   .box{
+   .category__box{
     width:100%;
    }
   }
-.box h3{
+.category__box h3{
     color: var(--secondary);
     position: relative;
     left: 30px;
@@ -300,7 +251,7 @@ max-width: 90%;
     line-height: 45px;
 }
 
-.box p{
+.category__box p{
 
     position: relative;
     left: 30px;
@@ -372,12 +323,7 @@ max-width: 90%;
     width: 40px;
     height: 40px;
 }
-.pg3{
-    display: flex;
-    padding-bottom: 150px;
-    background-color: #fff;
-   
-}
+
 
 .box4 h3{
     color: var(--secondary);
@@ -470,7 +416,7 @@ max-width: 90%;
 .about-img img{
     align-items: center;
     border-radius: 8px;
-   
+   max-width: 100%;
 }
 .about-contain{
     font-family: "Nunito", sans-serif;
@@ -480,7 +426,7 @@ max-width: 90%;
     text-align: left;
     box-sizing: border-box;
     letter-spacing: 1px;
-    height: 400px;
+    
     gap: 100px;
 }
 .about-header p{
@@ -488,18 +434,7 @@ max-width: 90%;
     font-weight: lighter;
     width: 160px;
 }
-.about-header p:after{
-    content: "";
-    display:block;
-    width: 50px;
-    height: 20px;
-    position: relative;
-    top: 48%;
-    left: 25%;
-    right:0;
-    z-index: -2;
-    background-color: #17a2b8;
-}
+
 span{
     background: #fff;
 }
@@ -513,7 +448,8 @@ span{
 .about-best p{
     color: #666666;
     font-family: "Nunito sans", sans-serif;
-   font-size: 16px;
+   font-size: 1rem;
+ 
    letter-spacing: 0px;
     
 }
@@ -538,15 +474,32 @@ span{
 .about-line{
     display: flex;
 }
+.middle-list{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    color:  #666666;
+    border-bottom: 1px solid  #666666;
+
+}
+.middle-list li{
+    border-top: 1px solid #666666;
+
+}
+.middle-list li p::before{
+    display: inline-block;
+    content: '✓';
+    color: #17a2b8;
+    
+}
 .about-div1{
     display: flex;
     gap: 10px;
-    width: 380px;
     border-top:  1.5px #6c757d solid;
 }
 .about-div1 p{
    color: #6c757d;
-   width: 300px;
+   
    font-family: "Nunito sans", sans-serif;
 }
 
@@ -567,7 +520,8 @@ span{
 
 .about-line2{
     display: flex;
-    width: 300px;
+    
+    
 }
 .about-line2 img{
     width: 18px;
@@ -585,25 +539,23 @@ span{
     display: flex;
     gap: 10px;
     border-top: 1.5px #6c757d solid;
-    width: 380px;
+  
 }
 .about-div2 p{
    color: #6c757d;
-   width: 380px;
+  
   font-family: "Nunito sans", sans-serif;
 }
 
 .about-line3{
     display: flex;
 }
-.icon-img3{
-   
-}
+
 .about-div3{
     display: flex;
     gap: 10px;
     border-top: 1.5px #6c757d solid;
-    width: 382px;
+    
     border-bottom:  1.5px #6c757d solid;
 }
 .about-div3 p{
@@ -611,8 +563,7 @@ span{
    font-family: "Nunito sans", sans-serif;
 }
 .about-button1{
-   width: 162px;
-   height: 80px;
+  
    line-height: 100px;
 }
 .about-button1 a{
@@ -632,7 +583,7 @@ a.learn-more2:hover{
   
 /* class page */
 .classes{
-    padding: 70px 0 ;
+    padding: 30px 0;
 }
 .class-row-container{
     display: block;
@@ -664,9 +615,11 @@ a.learn-more2:hover{
     position: absolute;
     top: 10px;
     right: 0;
-    left:38%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
 }
 .class-head{
     font-family: "Handlee", cursive;
@@ -687,7 +640,7 @@ a.learn-more2:hover{
 .card-body{
 
     width: 350px;
-    height: 630px;
+    padding-bottom: 30px;
     background-color: #f8f9fa ;   
     border-radius: 10px;
     border-top: 1px black;
@@ -696,7 +649,7 @@ a.learn-more2:hover{
 }
 .card-body img{
     width: 350px;
-    height: 234px;
+  
     border-radius: 6px 6px 0 0;
 }
 .card-body-content{
@@ -730,6 +683,12 @@ border-top: 1.5px solid #b6b8b9;
 .card-element span{
  background: none;
 }
+.element-wrapper{
+  display: flex;
+   width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .element1{
     text-decoration: none;
     flex-basis: 40%;
@@ -752,8 +711,7 @@ border-top: 1.5px solid #b6b8b9;
     border-style: none;
     border-radius: 100px;
     padding: 10px 25px;
-    width: 80px;
-    height: 50px;
+    
     font-family: "Nunito sans", sans-serif;
     color:white;
     font-size: 15px;
@@ -765,7 +723,7 @@ a.card-button1:hover{
 .card-body2{
     
     width: 350px;
-    height: 630px;
+    padding-bottom: 30px;
     background-color: #f8f9fa ;   
     border-radius: 10px;
     border-top: 1px black;
@@ -775,7 +733,7 @@ a.card-button1:hover{
 }
 .card-body2 img{
     width: 350px;
-    height: 234px;
+    
     border-radius: 6px 6px 0 0;
 }
 .drawing-class2{
@@ -795,8 +753,7 @@ a.card-button1:hover{
     border-style: none;
     border-radius: 100px;
     padding: 10px 25px;
-    width: 80px;
-    height: 50px;
+   
     font-family: "Nunito sans", sans-serif;
     color:white;
     font-size: 15px;
@@ -804,14 +761,11 @@ a.card-button1:hover{
 a.card-button2:hover{
     background-color: #0b7383;
 }
-.card-button2{
-    
-    
-}
+
 .card-body3{
     
     width: 350px;
-    height: 630px;
+    padding-bottom: 30px;
     background-color: #f8f9fa ;   
     border-radius: 10px;
     border-top: 1px black;
@@ -821,7 +775,7 @@ a.card-button2:hover{
 }
 .card-body3 img{
     width: 350px;
-    height: 234px;
+    
     border-radius: 6px 6px 0 0;
 }
 
@@ -837,8 +791,7 @@ a.card-button2:hover{
     border-radius: 100px;
     
     padding: 10px 25px;
-    width: 80px;
-    height: 50px;
+    
     font-family: "Nunito sans", sans-serif;
     color:white;
     font-size: 15px;
@@ -854,11 +807,12 @@ a.card-button3:hover{
 
 
 .teacher-row-container{
-   padding: 0 0 60px 0;
+   padding:  30px 0;
     margin: 0 auto;
     justify-content: center;
 
 }
+
 .teachers h4{
     position: relative;
     text-align: center;
@@ -882,9 +836,11 @@ a.card-button3:hover{
     position: absolute;
     top: 10px;
     right: 0;
-    left: 39.6%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
 }
 .teacher-head{
     font-family: "Handlee", cursive;
@@ -897,10 +853,10 @@ a.card-button3:hover{
 }
 .teacher-img{
     display: flex;
+    flex-wrap: wrap;
     padding-top: 30px;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
+    
     
 }
 .teacher-details1{
@@ -944,38 +900,37 @@ a.card-button3:hover{
 }
 
 .container{
-    width: 265px;
-    height:265px;
+   
     background-color: #17a2b8;
-    clip-path: circle(48%);
+    clip-path: circle(45%);
     
     background-repeat: no-repeat;
 }
 
 .container-1{
-    width: 265px;
-    height:265px;
+   
     background-color: #17a2b8;
-    clip-path: circle(49%);
+    clip-path: circle(45%);
    
     background-repeat: no-repeat;
 }
+
 .container-2{
-    width: 265px;
-    height:265px;
+   
     background-color: #17a2b8;
-    clip-path: circle(49%);
+    clip-path: circle(45%);
 
     background-repeat: no-repeat;
 }
+
 .container-3{
-    width: 265px;
-    height:265px;
+   
     background-color: #17a2b8;
-    clip-path: circle(49%);
+    clip-path: circle(45%);
  
     background-repeat: no-repeat;
 }
+
 .teacher-name{
     display: flex;
     color: var(--secondary);
@@ -999,6 +954,7 @@ a.card-button3:hover{
 
 
 .contact{
+    padding: 20px 0;
     margin: 0 auto;
     justify-content: center;
 }
@@ -1029,14 +985,16 @@ a.card-button3:hover{
     }
     .contact h4:before{
         content: "";
-        max-width: 15rem;
+        max-width: 14rem;
         min-height: 0.2rem;
         position: absolute;
         top: 10px;
         right: 0;
-        left: 40%;
+        left:50%;
         z-index: -2;
+        transform: translatex(-50%);
         background-color: #17a2b8;
+      
     }
 
     .contact-form{
@@ -1069,7 +1027,7 @@ a.card-button3:hover{
 .contact-textarea{
     font-size: 18px;
     width: 90%;
-    font-family: "Nutino" sans-serif;
+    font-family: "Nutino", sans-serif;
     padding: 8px 15px;
     border-radius: 5px;
  border: 1px solid #ccc;
@@ -1085,45 +1043,7 @@ a.card-button3:hover{
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
 }
-/* input[type=name], select {
-    width: 115%;
 
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type=Yemail], select {
-    width: 115%;
-   
-   
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type=Ysubject], select {
-    width: 115%;
-
-  
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type=Ymessage], select {
-    width: 115%;
-   
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input::placeholder{
-    font-size: 18px;
-    font-family: "Nunito", sans-serif;
-  } */
-  
 .contact-form a{
     background-color:var(--cyan);
     border-style: none;
@@ -1194,7 +1114,7 @@ a.form-btn:hover{
 .contact-content h5{
     color: #6c757d;
     font-weight: bolder;
-    font-family: "Nunito" sans-serif;
+    font-family: "Nunito",sans-serif;
 }
 .contact-elements2{
     display:flex;
@@ -1429,34 +1349,22 @@ height: 40px;
     
     
 }
-.footer-elements2{
 
-}
-
-.footer-icon6{
-    
-}
 .footer-icon6 img{
     width: 28px;
    
 }
-.fa-envelope {
-    
-}
+
 
 .footer-elements3{
     display:flex;
 }
-.footer-icon7{
-    
-}
+
 .footer-icon7 img{
     width: 30px;
     
 }
-.fa-phone {
-  
-}
+
 
 
 .footer-colum2{
@@ -1467,7 +1375,7 @@ height: 40px;
 }
 .footer-info h3{
    font-size: 28px;
-   font-weight: 400px;
+   font-weight: 400;
 }
 .footer-lst-header h3{
    font-family: "Handlee", cursive;
@@ -1516,45 +1424,28 @@ height: 40px;
  
   .footer-form{
     
-    width: 400px;
     line-height: 65px;
   }
-  input[type=footer-name], select {
+  input[type=text], select {
     padding: 15px;
-    width: 300px;
+    width: 100%;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 5.5px;
     box-sizing: border-box;
-    -webkit-border-radius: 5.5px;
-    -moz-border-radius: 5.5px;
-    -ms-border-radius: 5.5px;
-    -o-border-radius: 5.5px;
+ 
 }
-  input[type=footer-email] {
-    width: 300px;
+  input[type=text] {
+    width: 100%;
     padding: 15px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 5.5px;
     box-sizing: border-box;
-    -webkit-border-radius: 5.5px;
-    -moz-border-radius: 5.5px;
-    -ms-border-radius: 5.5px;
-    -o-border-radius: 5.5px;
+ 
 }
-  .footer-form-btn{
 
-  }
-  .footer-form-btn a{
-    width: 400px;
-  
-    font-family: "Nunito sans", sans-serif;
-    background-color: #17a2b8;
-    border-radius: 100px;
-    padding: 18px 105px;
-    color: #fff;
-  }
+ 
   a.footer-btn2:hover{
      background-color: #0b7383;
   }
@@ -1579,16 +1470,43 @@ height: 40px;
   }
  
  @media screen and (max-width:767px) {
-    .header-nav{
-        display: none;
-     }
-     .toogle_btn{
-         display:block;
-       }
+  
+   .header-link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background: #f8f9fa;
+    width: 100%;
+    transition: 0.2s;
+    padding: 20px 25px;
+    margin-top: 8px;
+    
+    
+   }
+   .header-nav li{
+    padding: 15px 0;
+   }
+   .nav-active{
+    display: block;
+   }
+  .toggle_btn {
+    display:block;
+    cursor: pointer;
+  }
+ 
    .primary-btn{
      display: none;
+     
    }
-  
+   .learn-more{
+    display: inline;
+   }
+   .card-button1{
+    display: inline-block;
+   }
    .banner-hero{
      align-items: center;
      text-align: center;
@@ -1604,11 +1522,14 @@ height: 40px;
      flex-wrap: wrap;
    }
    .about-contain{
-    
+    max-width: 100%;
      justify-content: center;
      margin: 0 auto;
     align-items: center;
     
+   }
+   .learn-more2{
+    display: inline;
    }
    .card{
      flex-wrap: wrap;
@@ -1617,41 +1538,43 @@ height: 40px;
    }
    .classes h4::before{
     content: "";
-    display:block;
-    width: 36%;
-    height: 2.4px;
+    max-width: 18rem;
+    min-height: 0.2rem;
     position: absolute;
     top: 10px;
     right: 0;
-    left:32%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
    }
 
 
    .teachers h4::before{
     content: "";
-    display:block;
-    width: 32%;
-    height: 2.4px;
+    max-width: 15rem;
+    min-height: 0.2rem;
     position: absolute;
     top: 10px;
     right: 0;
-    left:34%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
    }
-   .teachers-img
+   .teacher-img
    {
      display: flex;
     flex-wrap: wrap;
- 
+   justify-content: center;
    
   
    }
 .about-row-container{
     display: block;
-    margin: 250px;
+   
 }
 .about-line-main{
     display: flex;
@@ -1659,16 +1582,17 @@ height: 40px;
   
 }
  .contact h4:before{
-     content: "";
-     display:block;
-     width: 32%;
-     height: 2.4px;
-     position: absolute;
-     top: 10px;
-     right: 0;
-     left:34%;
-     z-index: -2;
-     background-color: #17a2b8;
+    content: "";
+        max-width: 14rem;
+        min-height: 0.2rem;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        left:50%;
+        z-index: -2;
+        transform: translatex(-50%);
+        background-color: #17a2b8;
+      
  }
  .teacher-img{
      display: flex;
@@ -1686,19 +1610,43 @@ height: 40px;
  .footer-col-p{
      width: 100%;
  }
+ 
  .footer-col3-header{
      padding: 40px 0;
  }
 
- 
+ .footer-btn2{
+    display:inline;
+}
  }
  @media screen and (max-width:991px ) and (min-width:768px) {
- 
-    .header-nav{
+    .header-link {
         display: none;
-     }
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        background: #f8f9fa;
+        transition: 0.2s;
+        margin-top: 8px;
+        }
+        .header-nav li{
+         padding: 15px 0;
+        }
+        .nav-active{
+         display: block;
+        }
+   .toggle_btn {
+    display:block;
+    cursor: pointer;
+  }
    .primary-btn{
      display: none;
+     
+   }
+   .learn-more{
+    display: inline;
    }
   
    .banner-hero{
@@ -1713,30 +1661,40 @@ height: 40px;
    flex-wrap: wrap;
       
    }
+   .card-button1{
+    display: inline-block;
+    justify-content: center;
+
+   }
+    .learn-more2{
+     display: inline;
+    }
    .classes h4::before{
     content: "";
-    display:block;
-    width: 36%;
-    height: 2.4px;
+    max-width: 18rem;
+    min-height: 0.2rem;
     position: absolute;
     top: 10px;
     right: 0;
-    left:32%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
    }
 
    .teachers h4::before{
     content: "";
-    display:block;
-    width: 32%;
-    height: 2.4px;
+    max-width: 15rem;
+    min-height: 0.2rem;
     position: absolute;
     top: 10px;
     right: 0;
-    left:34%;
+    left:50%;
     z-index: -2;
+    transform: translatex(-50%);
     background-color: #17a2b8;
+  
    }
   .teacher-img{
     display: flex;
@@ -1751,15 +1709,17 @@ height: 40px;
 }
 .contact h4:before{
     content: "";
-    display:block;
-    width: 32%;
-    height: 2.4px;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    left:34%;
-    z-index: -2;
-    background-color: #17a2b8;
+        max-width: 14rem;
+        min-height: 0.2rem;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        left:50%;
+        z-index: -2;
+        transform: translatex(-50%);
+        background-color: #17a2b8;
+      
+  
 }
 .contact-controller{
     display: flex;
@@ -1771,7 +1731,27 @@ height: 40px;
    
    
 }
+
+.footer-btn2{
+    display:inline;
+    max-width: 100%;
 }
+}
+/* @media screen and (min-width:992px) and (max-width:1199px) {
+    .teacher-img{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .container{
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+            
+    }
+} */
+
+
 
  
        
